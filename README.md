@@ -42,6 +42,8 @@
   
   ![app image](./assets/demo.gif)
   
+  ![prompted questions](./assets/questions.png)
+
   ---
   
   ## Credits
