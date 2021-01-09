@@ -238,8 +238,17 @@ limitations under the License.`;
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  switch (license) {
+    case "MIT":
+      return `![MIT License Badge](https://img.shields.io/apm/l/vim-mode)`;
 
-  
+    case "Apache 2.0":
+      return `![Apache 2.0 License Badge](https://img.shields.io/hexpm/l/plug)`;
+    case "None":
+      return ``;
+    default:
+      return renderLicenseBadge("MIT");
+  }
 }
 
 // TODO: Create a function that returns the license link
@@ -285,6 +294,7 @@ function generateMarkdown(data) {
     license,
   } = data;
   return `# ${title}
+  ${renderLicenseBadge(license)}
 
   ## Description
   
