@@ -67,7 +67,7 @@ const questions = [
     name: "license",
     type: "list",
     message: "Choose license: ",
-    choices: ["MIT","None"]
+    choices: ["MIT","Apache 2.0","None"]
   },
 
 ];

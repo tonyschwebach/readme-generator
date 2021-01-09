@@ -1,34 +1,65 @@
-// Licenses
-const mitLicense = (copyrightOwner) => {
-  return `---
+# fadfadfadf
+
+  ## Description
   
-## License
+  dfadfa
+  
+  ---
+  
+  ## Table of Contents
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+  - [License](#license)
+  
+  ---
+  
+  ## Installation
+  
+  dfa
+  
+  URL for active webpage: [d](d)
+  
+  URL for repository: []()
+  
+  ---
+  
+  ## Usage
+  
+  df
+  
+  ![app image](d)
+  
+  ---
+  
+  ## Credits
+  
+  f
+  
+  
+  ---
+  
+  ## Contributing
 
-MIT License
+  dafa
+  
+  ---
+  
+  ## Tests
 
-Copyright (c) [${new Date().getFullYear()}] [${copyrightOwner}]
-    
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.`;
-};
-
-const apacheLicense = (copyrightOwner) => {
-  return `---
+  adfa
+  
+  ---
+  
+  ## Questions
+  
+  Please contact [d](mailto:d) or d on [Github](https://github.com/d/).
+   
+  ---
   
 ## License
 
@@ -220,7 +251,7 @@ file or class name and description of purpose be included on the
 same "printed page" as the copyright notice for easier
 identification within third-party archives.
 
-Copyright (c) [${new Date().getFullYear()}] [${copyrightOwner}]
+Copyright (c) [2021] [d]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -232,122 +263,5 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.`;
-};
-
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-
+limitations under the License.
   
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license === "None") {
-    return ``;
-  } else {
-    return `- [License](#license)`;
-  }
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license, copyrightOwner) {
-  switch (license) {
-    case "MIT":
-      return mitLicense(copyrightOwner);
-    case "Apache 2.0":
-      return apacheLicense(copyrightOwner);
-    case "None":
-      return ``;
-    default:
-      return renderLicenseSection("MIT");
-  }
-}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  const {
-    title,
-    description,
-    imgPath,
-    githubUsername,
-    contactEmail,
-    deployedURL,
-    repoURL,
-    installation,
-    usage,
-    credits,
-    contribution,
-    testing,
-    license,
-  } = data;
-  return `# ${title}
-
-  ## Description
-  
-  ${description}
-  
-  ---
-  
-  ## Table of Contents
-  
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
-  ${renderLicenseLink(license)}
-  
-  ---
-  
-  ## Installation
-  
-  ${installation}
-  
-  URL for active webpage: [${deployedURL}](${deployedURL})
-  
-  URL for repository: [${repoURL}](${repoURL})
-  
-  ---
-  
-  ## Usage
-  
-  ${usage}
-  
-  ![app image](${imgPath})
-  
-  ---
-  
-  ## Credits
-  
-  ${credits}
-  
-  
-  ---
-  
-  ## Contributing
-
-  ${contribution}
-  
-  ---
-  
-  ## Tests
-
-  ${testing}
-  
-  ---
-  
-  ## Questions
-  
-  Please contact [${contactEmail}](mailto:${contactEmail}) or ${githubUsername} on [Github](https://github.com/${githubUsername}/).
-   
-  ${renderLicenseSection(license, githubUsername)}
-  
-`;
-}
-
-module.exports = generateMarkdown;
